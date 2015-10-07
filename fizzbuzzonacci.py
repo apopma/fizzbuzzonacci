@@ -1,3 +1,5 @@
+import math
+
 def fizzbuzzonacci(n):
     # First, generate the first n Fibonacci numbers.
     fibos = fibonacci_numbers(n)
@@ -31,6 +33,14 @@ def divisible_by(num, divisor):
     return num % divisor == 0
 
 def prime(num):
-    pass
+    if n == 1: return False
+    if n == 2: return True
+    if n % 2 == 0: return False
+
+    sqrt_n = int(math.floor(math.sqrt(n)))
+    for i in range(3, sqrt_n + 1, 2):
+        if n % i == 0:
+            return False
+    return True
 
 fizzbuzzonacci(10)
