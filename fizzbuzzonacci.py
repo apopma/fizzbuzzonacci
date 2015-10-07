@@ -33,7 +33,7 @@ def divisible_by(num, divisor):
     return num % divisor == 0
 
 def prime(n):
-    if n == 1: return False
+    if n <= 1: return False
     if n == 2: return True
     if n % 2 == 0: return False
 
